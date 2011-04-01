@@ -19,8 +19,9 @@ var humanstxt = {
     
     var req = new XMLHttpRequest();
     req.open('GET', uri + "/humans.txt", false);
+
     req.onreadystatechange = function () {
-      if (req.readyState == 4 && req.status == 200) {
+      if (req.readyState == 4 && req.status == 200 && /text\/plain/.test(req.getResponseHeader("Content-Type")) {
           htxt = req.responseText;
       }
     };
@@ -35,7 +36,7 @@ var humanstxt = {
 
   },
 
-  onFeedButtonClick: function(event) {
+  onHumantxtClick: function(event) {
     event.stopPropagation();
     
     if (event.target.hasAttribute("feed") &&
