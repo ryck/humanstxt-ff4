@@ -19,10 +19,10 @@ var humanstxt = {
     var uri = content.document.location;
     
     var req = new XMLHttpRequest();
-    req.open('GET', uri + "/humans.txt", true);
+    req.open('GET', uri + "/humans.txt", false);
     req.onreadystatechange = function () {
-      if (req.readyState == 4) && req.status == 200) {
-          var htxt = req.responseText;
+      if (req.readyState == 4 && req.status == 200) {
+          htxt = req.responseText;
       }
     };
     req.send(null);
@@ -30,7 +30,7 @@ var humanstxt = {
 
     if (htxt.length > 0) {
       humanstxtButton.collapsed = false;
-      feedButton.setAttribute("tooltiptext", src);
+      humanstxtButton.setAttribute("tooltiptext", src);
     } else {
       humanstxtButton.collapsed = true;
     }
