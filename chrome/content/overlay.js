@@ -67,11 +67,11 @@ var humanstxt = {
     };
     req.send(null);
 
-    if !(htxt.length > 0 && rps.match("text/plain")) {
-      humanstxtButton.collapsed = true;
-    } else {
+    if (htxt.length > 0 && rps.match("text/plain")) {
       humanstxtButton.collapsed = false;
-      humanstxtButton.setAttribute("tooltiptext", htxt);    
+      humanstxtButton.setAttribute("tooltiptext", htxt);
+    } else {
+      humanstxtButton.collapsed = true;
     }
 
 
