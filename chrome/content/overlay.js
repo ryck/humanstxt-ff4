@@ -16,15 +16,14 @@ var humanstxt = {
     var humantxtButton = document.getElementById("humanstxt-button");
     humantxtButton.removeAttribute("source");
 
-    var uri = window.content.location.href;
+    var uri = content.document.location;
     
     var req = new XMLHttpRequest();
-    var htxt = 0;
-    req.open('GET', 'http://www.mozilla.org/', true);
-    req.onreadystatechange = function (aEvt) {
+    req.open('GET', uri + "/humans.txt", true);
+    req.onreadystatechange = function () {
       if (req.readyState == 4) {
          if(req.status == 200)
-          htxt = req.responseText;
+          var htxt = req.responseText;
       }
     };
     req.send(null);
