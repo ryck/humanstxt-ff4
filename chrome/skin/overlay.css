@@ -1,22 +1,35 @@
-/* This is just an example.  You shouldn't do this. */
-#humanstxt-hello
-{
-  color: red ! important;
+#humanstxt-button > .button-box > .box-inherit > .button-text,
+#humanstxt-button > .button-box > .button-menu-dropmarker {
+  display: none;
 }
-#humanstxt-toolbar-button
-{
-  list-style-image: url("chrome://humanstxt/skin/toolbar-button.png");
-  -moz-image-region: rect(0px 24px 24px 0px);
+
+#humanstxt-menu > .feed-menuitem:-moz-locale-dir(rtl) {
+  direction: rtl;
 }
-#humanstxt-toolbar-button:hover
-{
-  -moz-image-region: rect(24px 24px 48px  0px);
+
+/* humans.txt icon */
+#humanstxt-button,
+#humanstxt-button > .button-box,
+#humanstxt-button:hover:active > .button-box {
+  padding: 0px;
+  margin: 0px;
+  border: 0px; 
+  background-color: transparent;
 }
-[iconsize="small"] #humanstxt-toolbar-button
-{
-  -moz-image-region: rect( 0px 40px 16px 24px);
+
+#humanstxt-button {
+  -moz-appearance: none; 
+  min-width: 0px; 
+  list-style-image: url("chrome://humanstxticon/skin/feed-icons-16-win.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
 }
-[iconsize="small"] #humanstxt-toolbar-button:hover
-{
-  -moz-image-region: rect(24px 40px 40px 24px);
+
+#humanstxt-button:hover {
+  -moz-image-region: rect(0px 32px 16px 16px);
 }
+
+#humanstxt-button[open="true"],
+#humanstxt-button:hover:active {
+  -moz-image-region: rect(0px 48px 16px 32px);
+}
+
