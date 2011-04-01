@@ -3,7 +3,10 @@
 <!DOCTYPE overlay SYSTEM "chrome://humanstxt/locale/overlay.dtd">
 <overlay id="humanstxt-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script src="overlay.js"/>
+  <script src="parseUri.js"/>
+  <!--
   <script src="ff-overlay.js"/>
+  -->
 
   <stringbundleset id="stringbundleset">
     <stringbundle id="humanstxt-strings" src="chrome://humanstxt/locale/overlay.properties"/>
