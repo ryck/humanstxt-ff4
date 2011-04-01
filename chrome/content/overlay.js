@@ -14,15 +14,15 @@ var humanstxt = {
 
   onPageLoad: function(aEvent) {
     var humantxtButton = document.getElementById("humanstxt-button");
-    var src = gBrowser.selectedBrowser.currentURI;
+    var uri = window.content.location.href;
 
     humantxtButton.removeAttribute("source");
 
-    var u = parseUri(src), site = u.protocol + "://" + u.host;
+    var u = parseUri(url), site = u.protocol + "://" + u.host;
     if (u.port && u.port.strlen) site += ":" + u.port      
 
     var req = new XMLHttpRequest();
-    req.open('GET', site+ "/humans.txt", false);
+    req.open('GET', site + "/humans.txt", false);
     req.send(null);
     if(req.status == 200)
     var txt = req.responseText;
