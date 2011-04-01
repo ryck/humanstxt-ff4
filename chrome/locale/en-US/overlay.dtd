@@ -1,8 +1,2 @@
-<!ENTITY humanstxt.label "Your localized menuitem">
-<!ENTITY humanstxtContext.label "Your Menuitem">
-<!ENTITY humanstxtContext.accesskey "Y">
-<!ENTITY humanstxtToolbarButton.label "Your Toolbar Button">
-<!ENTITY humanstxtToolbarButton.tooltip "This is your toolbar button!">
-<!ENTITY humanstxtSidebar.label "Your Sidebar">
-<!ENTITY humanstxtToolbar.name  "example">
-<!ENTITY humanstxtToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &humanstxtToolbar.name;">
+<!ENTITY humanstxt-button.tooltip "This is your toolbar button!">
+

@@ -19,15 +19,10 @@
             id="humanstxt-button"
             style="-moz-user-focus: none" 
             class="plain urlbar-icon"
-            collapsed="true"
-            tooltiptext="&feedButton.tooltip;"
-            onclick="return humanstxt.onFeedButtonClick(event);">
+            collapsed="true">
             
               <menupopup position="after_end"
-                         id="humanstxt-menu"
-                         onpopupshowing="return FeedHandler.buildFeedList(this);"
-                         oncommand="return FeedHandler.subscribeToFeed(null, event);"
-                         onclick="checkForMiddleClick(this, event);"/>
+                         id="humanstxt-menu"/>
     </button>
   </hbox>
 </textbox>
