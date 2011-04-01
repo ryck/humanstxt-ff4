@@ -20,5 +20,5 @@
 #humanstxt-button, #humanstxt-button:hover, #humanstxt-button[open="true"], #humanstxt-button:hover:active {
   -moz-appearance: none; 
   min-width: 0px;
-  list-style-image: url("chrome://humanstxticon/skin/humanstxt-icon-16.png");
+  list-style-image: url("chrome://humanstxt/skin/humanstxt-icon-16.png");
 }
