@@ -2,5 +2,4 @@ content   humanstxt                 chrome/content/
 skin      humanstxt   classic/1.0   chrome/skin/
 locale    humanstxt   en-US         chrome/locale/en-US/
 
-
 overlay   chrome://browser/content/browser.xul   chrome://humanstxt/content/ff-overlay.xul
