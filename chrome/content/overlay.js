@@ -21,7 +21,7 @@ var humanstxt = {
     req.open('GET', uri + "/humans.txt", false);
 
     req.onreadystatechange = function () {
-      if (req.readyState == 4 && req.status == 200 && /text\/plain/.test(req.getResponseHeader("Content-Type")) {
+      if (req.readyState == 4 && req.status == 200 && req.getResponseHeader("Content-Type") == "text/plain") {
           htxt = req.responseText;
       }
     };
