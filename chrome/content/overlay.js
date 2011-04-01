@@ -21,8 +21,7 @@ var humanstxt = {
     var req = new XMLHttpRequest();
     req.open('GET', uri + "/humans.txt", true);
     req.onreadystatechange = function () {
-      if (req.readyState == 4) {
-         if(req.status == 200)
+      if (req.readyState == 4) && req.status == 200) {
           var htxt = req.responseText;
       }
     };
