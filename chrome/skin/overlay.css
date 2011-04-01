@@ -17,19 +17,8 @@
   background-color: transparent;
 }
 
-#humanstxt-button {
+#humanstxt-button, #humanstxt-button:hover, #humanstxt-button[open="true"], #humanstxt-button:hover:active {
   -moz-appearance: none; 
-  min-width: 0px; 
-  list-style-image: url("chrome://humanstxticon/skin/feed-icons-16-win.png");
-  -moz-image-region: rect(0px 16px 16px 0px);
+  min-width: 0px;
+  list-style-image: url("chrome://humanstxticon/skin/humanstxt-icon-16.png");
 }
-
-#humanstxt-button:hover {
-  -moz-image-region: rect(0px 32px 16px 16px);
-}
-
-#humanstxt-button[open="true"],
-#humanstxt-button:hover:active {
-  -moz-image-region: rect(0px 48px 16px 32px);
-}
-
