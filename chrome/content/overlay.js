@@ -13,8 +13,7 @@ var humanstxt = {
   },
 
   onPageLoad: function(aEvent) {
-    var humantxtButton = document.getElementById("humanstxt-button");
-    humantxtButton.removeAttribute("source");
+    var humanstxtButton = document.getElementById("humanstxt-button");
 
     var uri = content.document.location;
     
@@ -29,7 +28,7 @@ var humanstxt = {
 
     if (htxt.length > 0) {
       humanstxtButton.collapsed = false;
-      humanstxtButton.setAttribute("tooltiptext", src);
+      humanstxtButton.setAttribute("tooltiptext", htxt);
     } else {
       humanstxtButton.collapsed = true;
     }
