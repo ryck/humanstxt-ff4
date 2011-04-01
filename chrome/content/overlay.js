@@ -46,6 +46,6 @@ var humanstxt = {
     }
 
   },  
-};
+}
 
-window.addEventListener("load", function () { humanstxt.init(); }, false);
+window.addEventListener("load", function() { humanstxt.init(); }, false);
