@@ -14,18 +14,23 @@ var humanstxt = {
 
   onPageLoad: function(aEvent) {
     var humantxtButton = document.getElementById("humanstxt-button");
-    var uri = window.content.location.href;
-
     humantxtButton.removeAttribute("source");
 
+    var uri = window.content.location.href;
+    
     var req = new XMLHttpRequest();
-    req.open('GET', uri + "/humans.txt", false);
+    var htxt = 0;
+    req.open('GET', 'http://www.mozilla.org/', true);
+    req.onreadystatechange = function (aEvt) {
+      if (req.readyState == 4) {
+         if(req.status == 200)
+          htxt = req.responseText;
+      }
+    };
     req.send(null);
-    if(req.status == 200)
-    var txt = req.responseText;
     
 
-    if (txt.length > 0) {
+    if (htxt.length > 0) {
       humanstxtButton.collapsed = false;
       feedButton.setAttribute("tooltiptext", src);
     } else {
