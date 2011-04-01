@@ -2,7 +2,6 @@
 <?xml-stylesheet href="chrome://humanstxt/skin/overlay.css" type="text/css"?>
 <!DOCTYPE overlay SYSTEM "chrome://humanstxt/locale/overlay.dtd">
 <overlay id="humanstxt-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script src="parseUri.js"/>
   <script src="overlay.js"/>
 
   <!--
