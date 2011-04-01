@@ -1,3 +1,18 @@
+function loadHumans(url, success, error) {
+
+  var u = parseUri(url),
+      humansLink = u.protocol + "://" + u.host + "/humans.txt";
+
+  var ajax = $.ajax({ type: "GET", url: humansLink })
+    .success(function(text, status, xhr) { 
+      console.log("xhr", xhr.getResponseHeader("Content-Type"));
+      return (/text\/plain/.test(xhr.getResponseHeader("Content-Type"))) ?
+        success(text, humansLink) : error(url, humansLink);
+    })
+    .error(function() { error(url, humansLink); })
+    
+}
+
 var humanstxt = {
   onLoad: function() {
     // initialization code
@@ -13,20 +28,23 @@ var humanstxt = {
   },
 
   onPageLoad: function(aEvent) {
-    var feedButton = document.getElementById("humanstxt-button");
-    var feeds = gBrowser.selectedBrowser.feeds;
-    
-    feedButton.removeAttribute("feed");
-    
-    if (feeds && feeds.length > 0) {      
-      feedButton.collapsed = false;
-        
-      if (feeds.length == 1) {
-        feedButton.setAttribute("feed", feeds[0].href);
-      }  
+    var humantxtButton = document.getElementById("humanstxt-button");
+    var src = gBrowser.selectedBrowser.currentURI;
+
+    humantxtButton.removeAttribute("source");
+
+    var u = parseUri(src), site = u.protocol + "://" + u.host;
+    if (u.port && u.port.strlen) site += ":" + u.port      
+
+    if (loadHumans(site)) {
+      humanstxtButton.collapsed = false;
+      if (site.length == 1) {
+        feedButton.setAttribute("source", src);
+      }        
     } else {
-      feedButton.collapsed = true;
+      humanstxtButton.collapsed = true;
     }
+
   },
 
   onFeedButtonClick: function(event) {
