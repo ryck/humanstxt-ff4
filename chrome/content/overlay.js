@@ -1,5 +1,5 @@
 var humanstxt = {
-  onLoad: function() {
+  init: function() {
     // initialization code
     this.initialized = true;
     this.strings = document.getElementById("humanstxt-strings");
@@ -26,7 +26,6 @@ var humanstxt = {
       }
     };
     req.send(null);
-    
 
     if (htxt.length > 0) {
       humanstxtButton.collapsed = false;
@@ -49,4 +48,4 @@ var humanstxt = {
   },  
 };
 
-window.addEventListener("load", function () { humanstxt.onLoad(); }, false);
+window.addEventListener("load", function () { humanstxt.init(); }, false);
