@@ -1,18 +1,3 @@
-function loadHumans(url, success, error) {
-
-  var u = parseUri(url),
-      humansLink = u.protocol + "://" + u.host + "/humans.txt";
-
-  var ajax = $.ajax({ type: "GET", url: humansLink })
-    .success(function(text, status, xhr) { 
-      console.log("xhr", xhr.getResponseHeader("Content-Type"));
-      return (/text\/plain/.test(xhr.getResponseHeader("Content-Type"))) ?
-        success(text, humansLink) : error(url, humansLink);
-    })
-    .error(function() { error(url, humansLink); })
-    
-}
-
 var humanstxt = {
   onLoad: function() {
     // initialization code
@@ -36,11 +21,16 @@ var humanstxt = {
     var u = parseUri(src), site = u.protocol + "://" + u.host;
     if (u.port && u.port.strlen) site += ":" + u.port      
 
-    if (loadHumans(site)) {
+    var req = new XMLHttpRequest();
+    req.open('GET', site+ "/humans.txt", false);
+    req.send(null);
+    if(req.status == 200)
+    var txt = req.responseText;
+    
+
+    if (txt.length > 0) {
       humanstxtButton.collapsed = false;
-      if (site.length == 1) {
-        feedButton.setAttribute("source", src);
-      }        
+      feedButton.setAttribute("tooltip", src);
     } else {
       humanstxtButton.collapsed = true;
     }
