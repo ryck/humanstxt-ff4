@@ -19,7 +19,8 @@
             id="humanstxt-button"
             style="-moz-user-focus: none" 
             class="plain urlbar-icon"
-            collapsed="true">
+            collapsed="true"
+            tooltiptext="">
             
               <menupopup position="after_end"
                          id="humanstxt-menu"/>

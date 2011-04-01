@@ -30,7 +30,7 @@ var humanstxt = {
 
     if (txt.length > 0) {
       humanstxtButton.collapsed = false;
-      feedButton.setAttribute("tooltip", src);
+      feedButton.setAttribute("tooltiptext", src);
     } else {
       humanstxtButton.collapsed = true;
     }
