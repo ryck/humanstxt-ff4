@@ -48,7 +48,9 @@ var humanstxt = {
 
   onPageLoad: function(aEvent) {
     var humanstxtButton = document.getElementById("humanstxt-button");
-
+    humanstxtButton.collapsed = true;
+    humanstxtButton.removeAttribute("tooltiptext");
+    
     var uri = content.document.location;
     
     var u = parseUri(uri), site = u.protocol + "://" + u.host;
