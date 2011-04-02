@@ -85,7 +85,7 @@ var humanstxt = {
     var u = parseUri(uri), site = u.protocol + "://" + u.host;
     if (u.port && u.port.strlen) site += ":" + u.port  
         
-    var site = uri + "/humans.txt";
+    var site = site + "/humans.txt";
     var tBrowser = top.document.getElementById("content");
     var tab = tBrowser.addTab(site);
     // use this line to focus the new tab, otherwise it will open in background
