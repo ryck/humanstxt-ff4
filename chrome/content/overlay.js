@@ -51,7 +51,7 @@ var humanstxt = {
     humanstxtButton.collapsed = true;
     humanstxtButton.removeAttribute("tooltiptext");
     
-    var uri = content.document.location;
+    var uri = window.content.location.href;
     
     var u = parseUri(uri), site = u.protocol + "://" + u.host;
     if (u.port && u.port.strlen) site += ":" + u.port  
