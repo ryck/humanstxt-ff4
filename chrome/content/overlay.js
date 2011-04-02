@@ -62,20 +62,18 @@ var humanstxt = {
 
     req.onreadystatechange = function () {
       if (req.readyState == 4 && req.status == 200) {
-          htxt = req.responseText;
-          rps = req.getResponseHeader("Content-Type");
+        htxt = req.responseText;
+        rps = req.getResponseHeader("Content-Type");
+        if (htxt.length > 0 && rps.match("text/plain")) {
+          humanstxtButton.collapsed = false;
+          humanstxtButton.setAttribute("tooltiptext", htxt);
+        }         
+      } else {
+        humanstxtButton.collapsed = true;
       }
       
     };
     req.send(null);
-
-    if (htxt.length > 0 && rps.match("text/plain")) {
-      humanstxtButton.collapsed = false;
-      humanstxtButton.setAttribute("tooltiptext", htxt);
-    } else {
-      humanstxtButton.collapsed = true;
-    }
-
 
   },
 
