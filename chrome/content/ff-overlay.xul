@@ -19,10 +19,9 @@
             style="-moz-user-focus: none" 
             class="plain urlbar-icon"
             collapsed="true"
-            tooltiptext="">
+            tooltiptext=""
+            onclick="return humanstxt.onHumantxtClick(event);">
             
-              <menupopup position="after_end"
-                         id="humanstxt-menu"/>
     </button>
   </hbox>
 </textbox>

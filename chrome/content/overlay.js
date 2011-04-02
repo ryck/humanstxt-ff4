@@ -79,12 +79,18 @@ var humanstxt = {
 
   onHumantxtClick: function(event) {
     event.stopPropagation();
+
+    var uri = window.content.location.href;
     
-    if (event.target.hasAttribute("feed") &&
-        event.eventPhase == Event.AT_TARGET &&
-        (event.button == 0 || event.button == 1)) {
-        FeedHandler.subscribeToFeed(null, event);
-    }
+    var u = parseUri(uri), site = u.protocol + "://" + u.host;
+    if (u.port && u.port.strlen) site += ":" + u.port  
+        
+    var site = uri + "/humans.txt";
+    var tBrowser = top.document.getElementById("content");
+    var tab = tBrowser.addTab(site);
+    // use this line to focus the new tab, otherwise it will open in background
+    tBrowser.selectedTab = tab;
+
 
   },  
 }
