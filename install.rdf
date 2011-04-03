@@ -9,8 +9,8 @@
     <em:homepageURL>http://ryck.me/</em:homepageURL>
     <em:contributor>Michael Mahemoff</em:contributor>
     <em:contributor>JasnaPaka</em:contributor>
-    <em:iconURL>chrome://humanstxt/icon.png</em:iconURL>
-    <em:icon64URL>chrome://humanstxt/icon64.png</em:icon64URL>
+    <em:iconURL>chrome://humanstxt/skin/icon.png</em:iconURL>
+    <em:icon64URL>chrome://humanstxt/skin/icon64.png</em:icon64URL>
     <em:description>Shows an human icon in the awesomebar if humans.txt is found in the current website</em:description>
     <em:targetApplication>
       <Description>
