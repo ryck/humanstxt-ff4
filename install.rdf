@@ -6,13 +6,14 @@
     <em:name>humanstxt</em:name>
     <em:version>0.1</em:version>
     <em:creator>Ricardo Gonzalez</em:creator>
+    <em:homepageURL>http://ryck.me/</em:homepageURL>
     <em:contributor>Michael Mahemoff</em:contributor>
     <em:contributor>JasnaPaka</em:contributor>
     <em:description>Shows an human icon in the awesomebar if humans.txt is found in the current website</em:description>
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
-        <em:minVersion>4.0b7</em:minVersion>
+        <em:minVersion>3.6</em:minVersion>
         <em:maxVersion>4.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
