@@ -1,0 +1,4 @@
+Shows an human icon in the awesomebar if humans.txt is found in the current website. The humans.txt content is displayed in the tooltip. Users can also click on the icon to se the humans.txt file.
+
+Install this extension at addons.mozilla.org:
+https://addons.mozilla.org/en-US/firefox/addon/humanstxt/
