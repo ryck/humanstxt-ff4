@@ -55,13 +55,12 @@
   </stringbundleset>
 
 <textbox id="urlbar">
-  <hbox id="humanstxt_button" insertbefore="urlbar-icons">
-    <button type="menu" 
-            id="humanstxt-button"
+  <hbox id="humanstxt_button" insertbefore="jprss-button,feed-button,urlbar-icons">
+    <button id="humanstxt-button"
             style="-moz-user-focus: none" 
             class="plain urlbar-icon"
             collapsed="true"
-            tooltiptext=""
+            tooltiptext="humans.txt found!"
             onclick="return humanstxt.onHumantxtClick(event);">
             
     </button>
