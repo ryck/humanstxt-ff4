@@ -81,7 +81,7 @@ var humanstxt = {
     this.strings = document.getElementById("humanstxt-strings");
     var appcontent = document.getElementById("appcontent");
     
-    //appcontent.addEventListener("pageshow", humanstxt.onPageLoad, true);
+    appcontent.addEventListener("pageshow", humanstxt.onPageLoad, true);
     
     var container = gBrowser.tabContainer;  
     container.addEventListener("TabSelect", humanstxt.onPageLoad, false);  
