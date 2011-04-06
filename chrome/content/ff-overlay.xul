@@ -55,7 +55,7 @@
   </stringbundleset>
 
 <textbox id="urlbar">
-  <hbox id="humanstxt_button" insertbefore="urlbar-icons,jprssicon_button">
+  <hbox id="humanstxt_button" insertbefore="jprssicon_button,urlbar-icons">
     <button id="humanstxt-button"
             style="-moz-user-focus: none" 
             class="plain urlbar-icon"
