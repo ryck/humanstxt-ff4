@@ -90,8 +90,6 @@ var humanstxt = {
 
   onPageLoad: function(aEvent) {
     var humanstxtButton = document.getElementById("humanstxt-button");
-    humanstxtButton.collapsed = true;
-    humanstxtButton.removeAttribute("tooltiptext");
     
     var uri = window.content.location.href;
     
