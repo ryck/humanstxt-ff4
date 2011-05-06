@@ -48,7 +48,7 @@ var humanstxt = {
 
   parseUri: function (str) {
   
-    parseUri.options = {
+    this.options = {
       strictMode: false,
       key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
       q:   {
@@ -61,7 +61,7 @@ var humanstxt = {
       }
     };  
   
-    var o   = parseUri.options,
+    var o   = this.options,
       m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
       uri = {},
       i   = 14;
