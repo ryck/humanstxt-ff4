@@ -1,4 +1,5 @@
-Shows an human icon in the awesomebar if humans.txt is found in the current website. The humans.txt content is displayed in the tooltip. Users can also click on the icon to se the humans.txt file.
+Shows an human icon in the awesomebar if humans.txt is found in the current website.
+The humans.txt content is displayed in the tooltip. Users can also click on the icon to se the humans.txt file.
 
 More info about humans.txt at http://humanstxt.org/
 

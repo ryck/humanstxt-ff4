@@ -60,7 +60,7 @@
             style="-moz-user-focus: none" 
             class="plain urlbar-icon"
             collapsed="true"
-            tooltiptext="humans.txt found!"
+            tooltiptext="humans.txt"
             onclick="return humanstxt.onHumantxtClick(event);">
             
     </button>
