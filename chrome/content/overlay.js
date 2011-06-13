@@ -85,7 +85,7 @@ var humanstxt = {
     appcontent.addEventListener("pageshow", humanstxt.onPageLoad, true);
     
     var container = gBrowser.tabContainer;  
-    container.addEventListener("TabSelect", humanstxt.onPageSelect, false);  
+    container.addEventListener("TabSelect", humanstxt.onPageLoad, false);  
         
   },
 
@@ -103,39 +103,28 @@ var humanstxt = {
 
     humanstxtButton.collapsed = true;
     
-    req.onreadystatechange = function () {
-      if (req.readyState == 4 && req.status == 200) {
-        htxt = req.responseText;
-        document.setAttribute("req-humanstxt", req.responseText);
-        var rps = req.getResponseHeader("Content-Type");
-        if (htxt.length > 0 && rps.match("text/plain")) {
-          humanstxtButton.collapsed = false;
-          humanstxtButton.setAttribute("tooltiptext", htxt);
-        }         
-      } else {
-        humanstxtButton.collapsed = true;
-      }
-      
-    };
-    req.send(null);
-
-  },
-
-  onPageSelect: function(aEvent) {
-    var humanstxtButton = document.getElementById("humanstxt-button");
     
-    humanstxtButton.collapsed = true;
-
     if (document.getAttribute("humanstxt")) {
       humanstxtButton.collapsed = false;
-      humanstxtButton.setAttribute("tooltiptext", document.getAttribute("req-humanstxt"));   
+      humanstxtButton.setAttribute("tooltiptext", document.getAttribute("humanstxt"));
     } else {
-      humanstxtButton.collapsed = true;
-    }
-      
-    req.send(null);
-
+      req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+          htxt = req.responseText;
+          var rps = req.getResponseHeader("Content-Type");
+          if (htxt.length > 0 && rps.match("text/plain")) {
+            document.setAttribute("humanstxt", htxt);
+            humanstxtButton.collapsed = false;
+            humanstxtButton.setAttribute("tooltiptext", htxt);
+          }         
+        } else {
+          humanstxtButton.collapsed = true;
+        }
+      };
+      req.send(null);
+  }
   },
+
 
   onHumantxtClick: function(event) {
     event.stopPropagation();
