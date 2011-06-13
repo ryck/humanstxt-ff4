@@ -103,10 +103,11 @@ var humanstxt = {
 
     humanstxtButton.collapsed = true;
     
+    var getHumans = document.getAttribute("humanstxt");
     
-    if (document.getAttribute("humanstxt")) {
+    if (getHumans) {
       humanstxtButton.collapsed = false;
-      humanstxtButton.setAttribute("tooltiptext", document.getAttribute("humanstxt"));
+      humanstxtButton.setAttribute("tooltiptext", getHumans);
     } else {
       req.onreadystatechange = function () {
         if (req.readyState == 4 && req.status == 200) {
