@@ -1,7 +1,12 @@
 content   humanstxt                 chrome/content/
 skin      humanstxt   classic/1.0   chrome/skin/
 locale    humanstxt   en-US         chrome/locale/en-US/
-locale    humanstxt   de         chrome/locale/de/
-locale    humanstxt   sr         chrome/locale/sr/
+locale    humanstxt   de            chrome/locale/de/
+locale    humanstxt   sr            chrome/locale/sr/
+locale    humanstxt   es-ES         chrome/locale/es-ES/
+locale    humanstxt   fr            chrome/locale/fr/
+locale    humanstxt   pt-BR         chrome/locale/pt-BR/
+locale    humanstxt   sv-SE         chrome/locale/sv-SE/
+locale    humanstxt   zh-CN         chrome/locale/zh-CN/
 
 overlay   chrome://browser/content/browser.xul   chrome://humanstxt/content/ff-overlay.xul
