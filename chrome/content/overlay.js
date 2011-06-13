@@ -127,13 +127,12 @@ var humanstxt = {
     humanstxtButton.collapsed = true;
 
     if (document.getAttribute("humanstxt")) {
-        humanstxtButton.collapsed = false;
-        humanstxtButton.setAttribute("tooltiptext", document.getAttribute("humanstxt"));
-      }         
+      humanstxtButton.collapsed = false;
+      humanstxtButton.setAttribute("tooltiptext", document.getAttribute("humanstxt"));   
     } else {
       humanstxtButton.collapsed = true;
     }
-
+      
     req.send(null);
 
   },
