@@ -106,7 +106,7 @@ var humanstxt = {
     req.onreadystatechange = function () {
       if (req.readyState == 4 && req.status == 200) {
         htxt = req.responseText;
-        document.setAttribute("humanstxt", responseText);
+        document.setAttribute("req-humanstxt", req.responseText);
         var rps = req.getResponseHeader("Content-Type");
         if (htxt.length > 0 && rps.match("text/plain")) {
           humanstxtButton.collapsed = false;
@@ -128,7 +128,7 @@ var humanstxt = {
 
     if (document.getAttribute("humanstxt")) {
       humanstxtButton.collapsed = false;
-      humanstxtButton.setAttribute("tooltiptext", document.getAttribute("humanstxt"));   
+      humanstxtButton.setAttribute("tooltiptext", document.getAttribute("req-humanstxt"));   
     } else {
       humanstxtButton.collapsed = true;
     }
