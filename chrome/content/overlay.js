@@ -103,7 +103,7 @@ var humanstxt = {
 
     humanstxtButton.collapsed = true;
     
-    var getHumans = document.getAttribute("humanstxt");
+    var getHumans = document.hasAttribute("humanstxt");
     
     if (getHumans) {
       humanstxtButton.collapsed = false;
